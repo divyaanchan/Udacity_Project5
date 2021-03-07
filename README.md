@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![divyaanchan](https://circleci.com/gh/divyaanchan/Udacity_Project5.svg?style=svg)](https://circleci.com/gh/divyaanchan/Udacity_Project5)
 
 ## Project Overview
 
