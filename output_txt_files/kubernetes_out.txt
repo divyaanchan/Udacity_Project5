@@ -1,1 +1,58 @@
-<paste log output from Kubernetes-mediated prediction, here>
+Using default tag: latest
+The push refers to repository [docker.io/anchandivya/divya]
+0ab79d39238e: Pushed
+fcaa5dbbee7e: Layer already exists
+7257dccecbfa: Layer already exists
+799a7872c8c7: Layer already exists
+715450468940: Layer already exists
+c9d608035aef: Layer already exists
+bb9c02680a15: Layer already exists
+a637c551a0da: Layer already exists
+2c8d31157b81: Layer already exists
+7b76d801397d: Layer already exists
+f32868cde90b: Layer already exists
+0db06dff9d9a: Layer already exists
+latest: digest: sha256:6619ef429ce2b2015e613a624afccd3ac8670a78abe937806f961cf54c598daa size: 2847
+PS C:\udacity\Udacity_Project5>
+
+PS C:\udacity\Udacity_Project5> kubectl  get pods
+NAME    READY   STATUS    RESTARTS   AGE
+divya   1/1     Running   0          66m
+PS C:\udacity\Udacity_Project5>
+
+AME    READY   STATUS    RESTARTS   AGE
+divya   1/1     Running   0          55m
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
+
+NAME    READY   STATUS    RESTARTS   AGE
+divya   1/1     Running   0          55m
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
+Port: 8000
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   260  100    48  100   212    216    954 --:--:-- --:--:-- --:--:--  1165{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
+Port: 8000
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   260  100    48  100   212    315   1394 --:--:-- --:--:-- --:--:--  1721{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
+

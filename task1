@@ -12,3 +12,190 @@ pylint --disable=R,C,W1203 app.py
 
 --------------------------------------------------------------------
 Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
+
+
+Task2
+========
+(.devops) ec2-user:~/environment/Udacity_Project5 (master) $ docker  build  --tag  divya .
+Sending build context to Docker daemon  1.174MB
+Step 1/6 : FROM python:3.7.3-stretch
+3.7.3-stretch: Pulling from library/python
+6f2f362378c5: Pull complete 
+494c27a8a6b8: Pull complete 
+7596bb83081b: Pull complete 
+372744b62d49: Pull complete 
+615db220d76c: Pull complete 
+39aa0c89bda1: Pull complete 
+ac275157d894: Pull complete 
+98d16dec829a: Pull complete 
+c8514b1c6524: Pull complete 
+Digest: sha256:205cafadbb7f0c48f2a6d655eb100a9675aa85e6e73958860f488406cce09779
+Status: Downloaded newer image for python:3.7.3-stretch
+ ---> 34a518642c76
+Step 2/6 : WORKDIR  /app
+ ---> Running in d6836fa1b223
+Removing intermediate container d6836fa1b223
+ ---> d7e7f238e052
+Step 3/6 : COPY . /app
+ ---> 96614df1a2bc
+Step 4/6 : RUN pip install --disable-pip-version-check --no-cache-dir --upgrade pip==21.0.1 &&    pip install -r requirements.txt --no-cache-dir
+ ---> Running in 07d97a94cf7d
+Collecting pip==21.0.1
+  Downloading https://files.pythonhosted.org/packages/fe/ef/60d7ba03b5c442309ef42e7d69959f73aacccd0d86008362a681c4698e83/pip-21.0.1-py3-none-any.whl (1.5MB)
+Installing collected packages: pip
+  Found existing installation: pip 19.1.1
+    Uninstalling pip-19.1.1:
+      Successfully uninstalled pip-19.1.1
+Successfully installed pip-21.0.1
+Collecting Click==7.0
+  Downloading Click-7.0-py2.py3-none-any.whl (81 kB)
+Collecting Flask==1.0.2
+  Downloading Flask-1.0.2-py2.py3-none-any.whl (91 kB)
+Collecting itsdangerous==1.1.0
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Jinja2==2.10.3
+  Downloading Jinja2-2.10.3-py2.py3-none-any.whl (125 kB)
+Collecting MarkupSafe==1.1.1
+  Downloading MarkupSafe-1.1.1-cp37-cp37m-manylinux2010_x86_64.whl (33 kB)
+Collecting numpy==1.17.2
+  Downloading numpy-1.17.2-cp37-cp37m-manylinux1_x86_64.whl (20.3 MB)
+Collecting pandas==0.24.2
+  Downloading pandas-0.24.2-cp37-cp37m-manylinux1_x86_64.whl (10.1 MB)
+Collecting python-dateutil==2.8.0
+  Downloading python_dateutil-2.8.0-py2.py3-none-any.whl (226 kB)
+Collecting pytz==2019.3
+  Downloading pytz-2019.3-py2.py3-none-any.whl (509 kB)
+Collecting scikit-learn==0.20.3
+  Downloading scikit_learn-0.20.3-cp37-cp37m-manylinux1_x86_64.whl (5.4 MB)
+Collecting scipy==1.3.1
+  Downloading scipy-1.3.1-cp37-cp37m-manylinux1_x86_64.whl (25.2 MB)
+Collecting six==1.12.0
+  Downloading six-1.12.0-py2.py3-none-any.whl (10 kB)
+Collecting Werkzeug==0.16.0
+  Downloading Werkzeug-0.16.0-py2.py3-none-any.whl (327 kB)
+Collecting pylint==2.6.0
+  Downloading pylint-2.6.0-py3-none-any.whl (325 kB)
+Collecting isort<6,>=4.2.5
+  Downloading isort-5.7.0-py3-none-any.whl (104 kB)
+Collecting mccabe<0.7,>=0.6
+  Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+Collecting astroid<=2.5,>=2.4.0
+  Downloading astroid-2.5-py3-none-any.whl (220 kB)
+Collecting toml>=0.7.1
+  Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Collecting wrapt<1.13,>=1.11
+  Downloading wrapt-1.12.1.tar.gz (27 kB)
+Collecting typed-ast<1.5,>=1.4.0
+  Downloading typed_ast-1.4.2-cp37-cp37m-manylinux1_x86_64.whl (743 kB)
+Collecting lazy-object-proxy>=1.4.0
+  Downloading lazy_object_proxy-1.5.2-cp37-cp37m-manylinux1_x86_64.whl (51 kB)
+Building wheels for collected packages: wrapt
+  Building wheel for wrapt (setup.py): started
+  Building wheel for wrapt (setup.py): finished with status 'done'
+  Created wheel for wrapt: filename=wrapt-1.12.1-cp37-cp37m-linux_x86_64.whl size=71604 sha256=d52c3eaf08899696eb1bebb79c326b4413aa76f83301596eb6c1bb79ea9d7f16
+  Stored in directory: /tmp/pip-ephem-wheel-cache-3yaufywh/wheels/62/76/4c/aa25851149f3f6d9785f6c869387ad82b3fd37582fa8147ac6
+Successfully built wrapt
+Installing collected packages: wrapt, typed-ast, six, numpy, MarkupSafe, lazy-object-proxy, Werkzeug, toml, scipy, pytz, python-dateutil, mccabe, Jinja2, itsdangerous, isort, Click, astroid, scikit-learn, pylint, pandas, Flask
+Successfully installed Click-7.0 Flask-1.0.2 Jinja2-2.10.3 MarkupSafe-1.1.1 Werkzeug-0.16.0 astroid-2.5 isort-5.7.0 itsdangerous-1.1.0 lazy-object-proxy-1.5.2 mccabe-0.6.1 numpy-1.17.2 pandas-0.24.2 pylint-2.6.0 python-dateutil-2.8.0 pytz-2019.3 scikit-learn-0.20.3 scipy-1.3.1 six-1.12.0 toml-0.10.2 typed-ast-1.4.2 wrapt-1.12.1
+Removing intermediate container 07d97a94cf7d
+ ---> f26fd93c91ae
+Step 5/6 : EXPOSE 80
+ ---> Running in dc01ff00073d
+Removing intermediate container dc01ff00073d
+ ---> 3133d5b2ef79
+Step 6/6 : CMD ["python", "app.py"]
+ ---> Running in 6b4e53cfddb7
+Removing intermediate container 6b4e53cfddb7
+ ---> 45dcc05d5632
+Successfully built 45dcc05d5632
+Successfully tagged divya:latest
+(.devops) ec2-user:~/environment/Udacity_Project5 (master) $ 
+(.devops) ec2-user:~/environment/Udacity_Project5 (master) $ docker  image  ls
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+divya               latest              45dcc05d5632        8 seconds ago       1.19GB
+lambci/lambda       python3.8           094248252696        5 weeks ago         524MB
+lambci/lambda       nodejs12.x          22a4ada8399c        5 weeks ago         390MB
+lambci/lambda       nodejs10.x          db93be728e7b        5 weeks ago         385MB
+lambci/lambda       python3.7           22b4b6fd9260        5 weeks ago         946MB
+lambci/lambda       python3.6           177c85a10179        5 weeks ago         894MB
+lambci/lambda       python2.7           d96a01fe4c80        5 weeks ago         763MB
+lambci/lambda       nodejs8.10          5754fee26e6e        5 weeks ago         813MB
+python              3.7.3-stretch       34a518642c76        21 months ago       929MB
+(.devops) ec2-user:~/environment/Udacity_Project5 (master) $ 
+
+
+(.devops) ec2-user:~/environment/Udacity_Project5 (master) $ docker run  -p 8000:80 divya
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 290-851-447
+
+
+ec2-user:~/environment/Udacity_Project5 (master) $ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
+*************************************
+
+Task 2
+======
+(.devops) ec2-user:~/environment/Udacity_Project5 (master) $ ./run_docker.sh 
+Sending build context to Docker daemon  1.174MB
+Step 1/6 : FROM python:3.7.3-stretch
+ ---> 34a518642c76
+Step 2/6 : WORKDIR  /app
+ ---> Using cache
+ ---> d7e7f238e052
+Step 3/6 : COPY . /app
+ ---> Using cache
+ ---> 9dff67aa3b63
+Step 4/6 : RUN pip install --disable-pip-version-check --no-cache-dir --upgrade pip==21.0.1 &&    pip install -r requirements.txt --no-cache-dir
+ ---> Using cache
+ ---> d9a90db1f6a8
+Step 5/6 : EXPOSE 80
+ ---> Using cache
+ ---> d61c09174c55
+Step 6/6 : CMD ["python", "app.py"]
+ ---> Using cache
+ ---> af3574564624
+Successfully built af3574564624
+Successfully tagged divya:latest
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+divya               latest              af3574564624        4 minutes ago       1.19GB
+<none>              <none>              45dcc05d5632        16 minutes ago      1.19GB
+lambci/lambda       python3.8           094248252696        5 weeks ago         524MB
+lambci/lambda       nodejs12.x          22a4ada8399c        5 weeks ago         390MB
+lambci/lambda       nodejs10.x          db93be728e7b        5 weeks ago         385MB
+lambci/lambda       python3.7           22b4b6fd9260        5 weeks ago         946MB
+lambci/lambda       python3.6           177c85a10179        5 weeks ago         894MB
+lambci/lambda       python2.7           d96a01fe4c80        5 weeks ago         763MB
+lambci/lambda       nodejs8.10          5754fee26e6e        5 weeks ago         813MB
+python              3.7.3-stretch       34a518642c76        21 months ago       929MB
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 316-158-034
+
+
+
+ (.devops) ec2-user:~/environment/Udacity_Project5 (master) $ ./make_prediction.sh 
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
